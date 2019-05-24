@@ -14,6 +14,7 @@ export class MailService {
     debugger
     const url = this.HOME_URL + 'email/template';
     return this.http.post(url, data)
+    
 
   }
 

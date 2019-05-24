@@ -13,7 +13,7 @@ import { UpdateAuthorComponent } from '../update-author/update-author.component'
 export class AllauthorsComponent implements OnInit {
   author:Author[] = []
   constructor(private authorservice:AuthorService  , public dialog:MatDialog,private toastr: ToastrService) { }
-  displayedColumns: string[] = ['firstname','lastname', 'aucode','action'];
+  displayedColumns: string[] = ['firstname', 'aucode','action'];
   dataSource = new MatTableDataSource(this.author);
   ngOnInit() {
     this.authorservice.getUsers().subscribe((res:any)=>{
